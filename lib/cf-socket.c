@@ -48,6 +48,10 @@
 #include <arpa/inet.h>
 #endif
 
+#ifdef _WIN32
+#pragma comment(lib, "Ws2_32.lib")
+#endif
+
 #ifdef __VMS
 #include <in.h>
 #include <inet.h>
