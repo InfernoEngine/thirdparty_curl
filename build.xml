@@ -9,7 +9,12 @@
 		<SourceRoot>.</SourceRoot>
 		<ThirdParty>true</ThirdParty>
 		<ExportedIncludeDirectory>include</ExportedIncludeDirectory>
-		<PreprocessorDefines>BUILDING_LIBCURL;HTTP_ONLY;CURL_ENABLE_SSL;CURL_USE_MBEDTLS</PreprocessorDefines>
+		<PreprocessorDefines>BUILDING_LIBCURL;HTTP_ONLY;USE_SCHANNEL;USE_IPV6;CURL_USE_MBEDTLS</PreprocessorDefines>
+
+		<FilterPlatform include="windows">
+			<PreprocessorDefines>USE_WINDOWS_SSPI</PreprocessorDefines>
+		</FilterPlatform>
+		
 		<LocalIncludeDirectory>include</LocalIncludeDirectory>
 		<LocalIncludeDirectory>lib</LocalIncludeDirectory>
 		<ThirdPartySharedGlobalExportDefine>MI_SHARED_LIB</ThirdPartySharedGlobalExportDefine>

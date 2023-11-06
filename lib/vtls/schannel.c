@@ -31,6 +31,10 @@
 
 #include "curl_setup.h"
 
+#ifdef _WIN32
+#pragma comment (lib, "Crypt32.lib")
+#endif
+
 #ifdef USE_SCHANNEL
 
 #ifndef USE_WINDOWS_SSPI
