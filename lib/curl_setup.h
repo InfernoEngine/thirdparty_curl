@@ -116,6 +116,10 @@
 #  include "config-dos.h"
 #endif
 
+#ifdef __PROSPERO__
+#  include "config-prospero.h"
+#endif
+
 #endif /* HAVE_CONFIG_H */
 
 /* ================================================================ */
